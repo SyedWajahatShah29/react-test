@@ -24,7 +24,7 @@ const Header = () => {
       <button onClick={() => handleClick(["test_1", "test_2"])}>
         change array
       </button>
-      <NewHeader array={data}>Test</NewHeader>
+      <NewHeader array={data}/>
     </>
   );
 };
@@ -35,12 +35,10 @@ type NewHeaderProps = {
   array: Array<string>;
   children?: React.ReactNode;
 };
-function NewHeader({ array, children }: NewHeaderProps) {
+function NewHeader({ array }: NewHeaderProps) {
   return (
     <div>
       array: {array.join(" ")}
-      <br />
-      children: {children}
     </div>
   );
 }
